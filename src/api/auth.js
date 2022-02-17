@@ -1,17 +1,17 @@
 import { api } from "./api";
 
 export function login(credentials) {
-  return api.post("/login", credentials);
+  return api.post("/api/login", credentials);
 }
 
 export function signup(credentials) {
-  return api.post("/signup", credentials);
+  return api.post("/api/signup", credentials);
 }
 
 export function logout() {
-  return api.post("/logout");
+  return api.post("/api/logout");
 }
 
 export function isLoggedIn() {
-  return api.get("/login");
+  return api.get("/api/login");
 }

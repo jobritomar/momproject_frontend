@@ -11,7 +11,7 @@ function Auth({ isLogin }) {
 
   return (
     <div>
-      <AuthForm submitMessage={submitMessage} onSubmit={onSubmit} />
+      <AuthForm submitMessage={submitMessage} onSubmit={onSubmit} isSignUp={!isLogin} />
     </div>
   );
 }

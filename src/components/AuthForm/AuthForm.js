@@ -1,7 +1,7 @@
 import React from "react";
 
-function AuthForm({ onSubmit, submitMessage }) {
-  const [state, setState] = React.useState({ email: "", password: "" });
+function AuthForm({ onSubmit, submitMessage, isSignUp }) {
+  const [state, setState] = React.useState({ email: "", password: "", phone: "", address: "", name: "" });
 
   const handleChange = ({ target }) => {
     const { name, value } = target;
@@ -32,6 +32,33 @@ function AuthForm({ onSubmit, submitMessage }) {
         value={state.password}
         onChange={handleChange}
       />
+      {isSignUp && <>
+        <label htmlFor="phone">Phone</label>
+        <input
+          required
+          name="phone"
+          type="phone"
+          value={state.phone}
+          onChange={handleChange}
+        />
+        <label htmlFor="address">Address</label>
+        <input
+          required
+          name="address"
+          type="address"
+          value={state.address}
+          onChange={handleChange}
+        />
+        <label htmlFor="name">Name</label>
+        <input
+          required
+          name="name"
+          type="name"
+          value={state.name}
+          onChange={handleChange}
+        />
+
+      </>}
       <button type="submit">{submitMessage}</button>
     </form>
   );
