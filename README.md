@@ -23,7 +23,10 @@ Shows the user navbar and changes on login
 props: the logged in user
 
 Home component
-Shows the home page with about us
+Shows the home page
+
+AboutUs
+Shows why our project was created and our contacts
 
 Login component
 Allows user to log in
