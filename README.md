@@ -76,6 +76,7 @@ props: a list of products and how many, status
 /auth/signup Signup
 /products ProductsList
 /cart ShoppingCart
+/orders OrdersStatus
 /profile Profile
 /profile/orders UserOrdersList
 /admin/orders AdminOrdersList

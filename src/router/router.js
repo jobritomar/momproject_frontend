@@ -6,6 +6,7 @@ import { Main } from "../pages/Main";
 import NavBar from "../components/NavBar";
 import { ROUTES } from ".";
 import AboutUs from "../pages/AboutUs";
+import ButtonsUser from "../components/buttonsUser"
 
 function AppRouter() {
   return (
@@ -13,21 +14,33 @@ function AppRouter() {
     <>
       <NavBar />
       <Switch>
-        <GuestRoute path={ROUTES.login}>
+        <GuestRoute exact path={ROUTES.login}>
           <Auth isLogin={true} />
         </GuestRoute>
-        <GuestRoute path={ROUTES.signup}>
 
+        <GuestRoute path={ROUTES.signup}>
           <Auth />
         </GuestRoute>
-        <GuestRoute path={ROUTES.aboutus}>
 
+        <GuestRoute path={ROUTES.aboutus}>
           <AboutUs />
         </GuestRoute>
-        <AppRoute exact path={ROUTES.main}>
 
+        <AppRoute exact path={ROUTES.main}>
+          <ButtonsUser />
           <Main />
         </AppRoute>
+
+        <AppRoute path={ROUTES.cart}>
+          <ButtonsUser />
+        </AppRoute>
+
+        <AppRoute path={ROUTES.orders}>
+          <ButtonsUser />
+        </AppRoute>
+
+
+
       </Switch>
     </>
   );

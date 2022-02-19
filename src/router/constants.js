@@ -3,5 +3,8 @@ export const ROUTES = {
   signup: "/signup",
   main: "/",
   aboutus: "/aboutus",
-  logout:"/logout"
+  logout:"/logout",
+  products:"/products",
+  cart: "/cart",
+  orders: "/orders"
 };
