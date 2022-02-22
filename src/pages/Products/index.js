@@ -1,4 +1,4 @@
-export default (props) => {
+const Products = (props) => {
     return (
         <div>
             <h1> Our products </h1>
@@ -10,7 +10,7 @@ export default (props) => {
 
             <div class="card-group">
   <div class="card">
-    <img class="card-img-top" src="https://images.ctfassets.net/bffxiku554r1/7BTUnImsQxT3d7wpfhi8aP/8668a4d0f1373fc5987888d9e8484e4b/P1-wk3-Hero-Ultimate-Vegan-Burger.jpg?fm=webp&q=60&w=1200&h=676z" alt="Card image cap"/>
+    <img class="card-img-top" src="https://images.ctfassets.net/bffxiku554r1/7BTUnImsQxT3d7wpfhi8aP/8668a4d0f1373fc5987888d9e8484e4b/P1-wk3-Hero-Ultimate-Vegan-Burger.jpg?fm=webp&q=60&w=1200&h=676z" alt="Card cap"/>
     <div class="card-body">
       <h5 class="card-title">Hamburguer</h5>
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -21,7 +21,7 @@ export default (props) => {
     </div>
   </div>
   <div class="card">
-    <img class="card-img-top" src="#" alt="Card image cap"/>
+    <img class="card-img-top" src="#" alt="Card cap"/>
     <div class="card-body">
       <h5 class="card-title">Card title</h5>
       <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
@@ -29,7 +29,7 @@ export default (props) => {
     </div>
   </div>
   <div class="card">
-    <img class="card-img-top" src="#" alt="Card image cap"/>
+    <img class="card-img-top" src="#" alt="Card cap"/>
     <div class="card-body">
       <h5 class="card-title">Card title</h5>
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
@@ -44,3 +44,5 @@ export default (props) => {
 
         </div>)
 }
+
+export default Products

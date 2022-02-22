@@ -1,4 +1,4 @@
-export default (props) => {
+const AboutUs = (props) => {
     return (
         <div class="jumbotron">
             <h1 class="display-4"> About this project </h1>
@@ -33,3 +33,5 @@ export default (props) => {
 
         </div>)
 }
+
+export default AboutUs

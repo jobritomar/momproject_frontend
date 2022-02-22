@@ -13,7 +13,7 @@ function Main() {
   <div class="card-header">
     <ul class="nav nav-pills card-header-pills">
       <li class="nav-item">
-        <a class="nav-link active" href="#">My Profile</a>
+        <a class="nav-link active" href="/">My Profile</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href={ ROUTES.cart}>My Cart</a>
