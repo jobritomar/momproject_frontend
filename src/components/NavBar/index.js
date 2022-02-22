@@ -16,7 +16,7 @@ const NavBar = () => {
                         </li>
 
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Products <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href={ROUTES.products}>Products <span class="sr-only">(current)</span></a>
                         </li>
                         
                         <li class="nav-item">

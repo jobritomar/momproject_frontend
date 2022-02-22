@@ -7,6 +7,7 @@ import NavBar from "../components/NavBar";
 import { ROUTES } from ".";
 import AboutUs from "../pages/AboutUs";
 import ButtonsUser from "../components/buttonsUser"
+import Products from "../pages/Products"
 
 function AppRouter() {
   return (
@@ -22,9 +23,18 @@ function AppRouter() {
           <Auth />
         </GuestRoute>
 
+
+
         <GuestRoute path={ROUTES.aboutus}>
           <AboutUs />
         </GuestRoute>
+
+        <GuestRoute path={ROUTES.products}>
+          <Products />
+        </GuestRoute>
+
+       <AppRoute exact path={ROUTES.logout}>
+        </AppRoute>
 
         <AppRoute exact path={ROUTES.main}>
           <ButtonsUser />

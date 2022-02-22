@@ -1,7 +1,7 @@
 export default (props) => {
     return (
-        <div>
-            <h1> About this project </h1>
+        <div class="jumbotron">
+            <h1 class="display-4"> About this project </h1>
 
             <div>
                 <h2> How this project was born?</h2>
