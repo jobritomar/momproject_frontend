@@ -16,7 +16,7 @@ const Orders = () => {
 const ProfileSmall = () => {
 
 
-  const { user, handleLogout } = useAuth();
+  const { user } = useAuth();
   return (
     <div>
       <h5 className="card-title"> Welcome {user?.name} </h5>

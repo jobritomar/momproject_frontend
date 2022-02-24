@@ -2,11 +2,9 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import { AppRoute, GuestRoute } from ".";
 import { Auth } from "../pages/Auth";
-import { Main } from "../pages/Main";
 import NavBar from "../components/NavBar";
 import { ROUTES } from ".";
 import AboutUs from "../pages/AboutUs";
-import ButtonsUser from "../components/buttonsUser"
 import Products from "../pages/Products"
 import Profile from "../pages/Profile/Profile";
 
