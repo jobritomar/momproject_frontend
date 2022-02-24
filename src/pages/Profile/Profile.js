@@ -2,16 +2,8 @@ import React from "react";
 import { useAuth } from "../../context/AuthContext";
 import { ROUTES } from "../../router/constants"
 import { Switch, Route, useLocation } from 'react-router-dom'
-
-
-
-const Cart = () => {
-  return (<p>hi cart</p>)
-}
-
-const Orders = () => {
-  return (<p>hi orders</p>)
-}
+import Cart from "./Cart"
+import Orders from "./Orders"
 
 const ProfileSmall = () => {
 
