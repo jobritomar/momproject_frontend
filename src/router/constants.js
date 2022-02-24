@@ -1,10 +1,10 @@
 export const ROUTES = {
   login: "/login",
   signup: "/signup",
-  main: "/",
-  aboutus: "/aboutus",
+  aboutus: "/",
   logout:"/logout",
   products:"/products",
-  cart: "/cart",
-  orders: "/orders"
+  profile: "/profile",
+  cart: "/profile/cart",
+  orders: "/profile/orders"
 };

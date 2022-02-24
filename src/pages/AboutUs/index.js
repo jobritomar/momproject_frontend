@@ -1,7 +1,7 @@
 const AboutUs = (props) => {
     return (
-        <div class="jumbotron">
-            <h1 class="display-4"> About this project </h1>
+        <div className="jumbotron">
+            <h1 className="display-4"> About this project </h1>
 
             <div>
                 <h2> How this project was born?</h2>
@@ -13,16 +13,16 @@ const AboutUs = (props) => {
                 </p>
             </div>
 
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=1200:*" class="d-block w-100" alt="..."/>
+            <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
+  <div className="carousel-inner">
+    <div className="carousel-item active">
+      <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=1200:*" className="d-block w-100" alt="..."/>
     </div>
-    <div class="carousel-item">
-      <img src="https://i0.statig.com.br/bancodeimagens/br/4j/48/br4j4845bvi3ygylo5wnhk84v.jpg" class="d-block w-100" alt="..."/>
+    <div className="carousel-item">
+      <img src="https://i0.statig.com.br/bancodeimagens/br/4j/48/br4j4845bvi3ygylo5wnhk84v.jpg" className="d-block w-100" alt="..."/>
     </div>
-    <div class="carousel-item">
-      <img src="https://comparaplano.com.br/wp-content/uploads/2019/09/dog-tv.png" class="d-block w-100" alt="..."/>
+    <div className="carousel-item">
+      <img src="https://comparaplano.com.br/wp-content/uploads/2019/09/dog-tv.png" className="d-block w-100" alt="..."/>
     </div>
   </div>
 </div>

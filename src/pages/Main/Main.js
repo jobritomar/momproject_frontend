@@ -3,31 +3,31 @@ import { useAuth } from "../../context/AuthContext";
 import { ROUTES } from "../../router/constants"
 
 function Main() {
-  const { user, handleLogout } = useAuth();
+  const { user } = useAuth();
   return (
     <div>
       <h2>Mom's Project</h2>
 
-  <div class="card text-center">
+  <div className="card text-center">
 
-  <div class="card-header">
-    <ul class="nav nav-pills card-header-pills">
-      <li class="nav-item">
-        <a class="nav-link active" href="/">My Profile</a>
+  <div className="card-header">
+    <ul className="nav nav-pills card-header-pills">
+      <li className="nav-item">
+        <a className="nav-link active" href="/">My Profile</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href={ ROUTES.cart}>My Cart</a>
+      <li className="nav-item">
+        <a className="nav-link" href={ ROUTES.cart}>My Cart</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href={ ROUTES.orders}>My Orders</a>
+      <li className="nav-item">
+        <a className="nav-link" href={ ROUTES.orders}>My Orders</a>
       </li>
     </ul>
   </div>
 
-  <div class="card-body">
-    <h5 class="card-title"> Welcome {user?.name} </h5>
-    <p class="card-text">Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia, pesquisou uma das mais obscuras palavras em latim, consectetur, oriunda de uma passagem de Lorem Ipsum, e, procurando por entre citações da palavra na literatura clássica, descobriu a sua indubitável origem.</p>
-    <button onClick={handleLogout}>logout</button>
+  <div className="card-body">
+    <h5 className="card-title"> Welcome {user?.name} </h5>
+    <p className="card-text">Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia, pesquisou uma das mais obscuras palavras em latim, consectetur, oriunda de uma passagem de Lorem Ipsum, e, procurando por entre citações da palavra na literatura clássica, descobriu a sua indubitável origem.</p>
+
   </div>
 </div>
       

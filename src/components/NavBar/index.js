@@ -1,35 +1,66 @@
+import { useAuth } from "../../context/AuthContext";
 import { ROUTES } from "../../router/constants"
 
 const NavBar = () => {
 
+    
+    const { user, handleLogout } = useAuth();
+
+
     return (
         <div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-expand ">
-                <a class="navbar-brand" href="/">Home</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+            <nav className="navbar navbar-expand-lg navbar-light bg-light navbar-expand ">
+                <a className="navbar-brand" href="/">Home</a>
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href={ROUTES.aboutus}>About Us <span class="sr-only">(current)</span></a>
-                        </li>
+                <div className="collapse navbar-collapse" id="navbarNav">
+                    <ul className="navbar-nav">
+            
 
-                        <li class="nav-item active">
-                            <a class="nav-link" href={ROUTES.products}>Products <span class="sr-only">(current)</span></a>
+                        <li className="nav-item active">
+                            <a className="nav-link" href={ROUTES.products}>Products <span className="sr-only">(current)</span></a>
                         </li>
                         
-                        <li class="nav-item">
-                            <a class="nav-link" href={ROUTES.login}>Login</a>
+                        {
+                            !user ? <>
+
+                                <li className="nav-item">
+                                    <a className="nav-link" href={ROUTES.login}>Login</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href={ROUTES.signup}>Signup</a>
+                                </li>
+                            </>
+                            
+                            :
+                            <>
+                
+                            <li className="nav-item active">
+                            <a className="nav-link" href={ROUTES.profile}>Profile <span className="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href={ROUTES.signup}>Signup</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href={ROUTES.logout}>Logout</a>
-                        </li>
+                        <li className="nav-item">
+                                <a className="nav-link" onClick={handleLogout} href={ROUTES.aboutus}>Logout</a>
+                            </li>
+
+                            </>
+                    }
                     </ul>
+
+                    <form class="d-flex">
+
+                    <button className="btn btn-primary btn-lg" type="submit"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-cart" viewBox="0 0 16 16">
+              <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+            </svg>  My cart</button>
+
+            <button className="btn btn-primary btn-lg" type="submit"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-cart" viewBox="0 0 16 16">
+              <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+            </svg>  My cart</button>
+
+    </form>
                 </div>
+            
+
             </nav>
         </div>
     )

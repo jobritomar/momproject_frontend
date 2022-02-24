@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import { AppRoute, GuestRoute } from ".";
 import { Auth } from "../pages/Auth";
 import { Main } from "../pages/Main";
@@ -8,6 +8,8 @@ import { ROUTES } from ".";
 import AboutUs from "../pages/AboutUs";
 import ButtonsUser from "../components/buttonsUser"
 import Products from "../pages/Products"
+import Profile from "../pages/Profile/Profile";
+
 
 function AppRouter() {
   return (
@@ -25,28 +27,19 @@ function AppRouter() {
 
 
 
-        <GuestRoute path={ROUTES.aboutus}>
+        <Route exact path={ROUTES.aboutus}>
           <AboutUs />
-        </GuestRoute>
+        </Route>
 
-        <GuestRoute path={ROUTES.products}>
+        <Route exact path={ROUTES.products}>
           <Products />
-        </GuestRoute>
+        </Route>
 
        <AppRoute exact path={ROUTES.logout}>
         </AppRoute>
 
-        <AppRoute exact path={ROUTES.main}>
-          <ButtonsUser />
-          <Main />
-        </AppRoute>
-
-        <AppRoute path={ROUTES.cart}>
-          <ButtonsUser />
-        </AppRoute>
-
-        <AppRoute path={ROUTES.orders}>
-          <ButtonsUser />
+        <AppRoute path="/profile">
+          <Profile />
         </AppRoute>
 
 
