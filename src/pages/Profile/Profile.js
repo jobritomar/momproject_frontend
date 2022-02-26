@@ -34,7 +34,7 @@ function Profile() {
 
   return (
     <div>
-      <h2>Mom's Project</h2>
+      <h1 class="display-1">Mom's Project</h1>
 
       <div className="card text-center">
 
@@ -54,7 +54,7 @@ function Profile() {
 
         <div className="card-body">
           <Switch>
-            <Route exact path="/profile">
+            <Route exact path="\/profile">
               <ProfileSmall />
             </Route> 
 
