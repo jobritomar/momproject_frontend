@@ -8,7 +8,6 @@ import AboutUs from "../pages/AboutUs";
 import Products from "../pages/Products"
 import Profile from "../pages/Profile/ClientProfile";
 import MomProfile from "../pages/Profile/MomProfile";
-import AddProduct from "../pages/Profile/AddProduct";
 
 
 function AppRouter() {

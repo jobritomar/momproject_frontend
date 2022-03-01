@@ -2,30 +2,6 @@ import { listOrder } from "../../api/orders"
 import React from "react"
 import { useParams } from 'react-router-dom'
 
-const fakeProps = [
-  {
-    _id: 235,
-    client: "Familia Feliz",
-    product: [{
-      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Banana-Single.jpg/1200px-Banana-Single.jpg",
-      name: "banana",
-      quantity: 1,
-      price: 1,
-    }
-      ,
-    {
-      image: "https://www.infoescola.com/wp-content/uploads/2010/03/kiwi.jpg",
-      name: "kiwi",
-      quantity: 2,
-      price: 2.5,
-    }
-    ],
-    status: "delievered"
-
-  }
-
-
-]
 
 
 
@@ -39,7 +15,7 @@ const OrderFileWithRealData = () => {
     })
 
   },
-    [])
+    [id])
 
   return order && <OrderFile order={order} />
 }
