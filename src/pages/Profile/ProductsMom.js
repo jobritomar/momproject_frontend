@@ -1,16 +1,30 @@
+import React from 'react'
+import { deleteItem, listItems } from '../../api'
+import { toast } from 'react-toastify';
+
+
+
+
+const handleDelete =  (id) => async () => {
+    await deleteItem(id)
+    toast.success("Item deleted")
+    setTimeout(() => window.location.reload(), 5000)
+
+}
+
 const fakeProps = [
     {
-            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Banana-Single.jpg/1200px-Banana-Single.jpg",
-            name: "banana",
-            description: "Banana, pacoba ou pacova é uma pseudobaga da bananeira, uma planta herbácea vivaz acaule da família Musaceae. São cultivadas em 130 países. Originárias do sudeste da Ásia são atualmente cultivadas em praticamente todas as regiões tropicais do planeta.",
-            price: 1,
-        },
-        {
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Banana-Single.jpg/1200px-Banana-Single.jpg",
+        name: "banana",
+        description: "Banana, pacoba ou pacova é uma pseudobaga da bananeira, uma planta herbácea vivaz acaule da família Musaceae. São cultivadas em 130 países. Originárias do sudeste da Ásia são atualmente cultivadas em praticamente todas as regiões tropicais do planeta.",
+        price: 1,
+    },
+    {
         image: "https://www.infoescola.com/wp-content/uploads/2010/03/kiwi.jpg",
         name: "kiwi",
         description: "Kiwi ou groselha chinesa é a baga comestível de várias espécies de videiras lenhosas no gênero Actinidia. O grupo de cultivares mais comum de kiwi é oval, do tamanho de um ovo de galinha grande: 5 a 8 centímetros de comprimento e 4,5 a 5,5 cm de diâmetro",
         price: 2.5,
-        },
+    },
 
     {
         image: "https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/320/320894/strawberry-on-white-background-to-represent-strawberry-tongue.jpg?w=1155&h=1541",
@@ -20,56 +34,70 @@ const fakeProps = [
     },
 
 
-] 
+]
+
+const ProductsMomWithRealData = () => {
+
+    const [products, setProducts] = React.useState([])
+    React.useEffect(() => {
+        listItems().then(products => {
+            setProducts(products)
+        })
+
+    },
+        [])
+
+    return <ProductsMom products={products} />
+
+}
+
+const ProductsMom = (props) => {
 
 
-const ProductsMom = () => {
+    return (
+        <div className="cart_section">
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="col-lg-10 offset-lg-1">
+                        <div className="cart_container">
+                            <div className="cart_title">List of Products</div>
+                            <div className="cart_items">
+                                <ul className="cart_list">
+                                    {
+                                        props.products.map((product) => <li className="cart_item clearfix">
+                                            <div className="cart_item_image"><img src={product.image} alt="product" /></div>
+                                            <div className="cart_item_info d-flex flex-md-row flex-column justify-content-between">
+                                                <div className="cart_item_name cart_info_col">
+                                                    <div className="cart_item_title">Name</div>
+                                                    <div className="cart_item_text">{product.name}</div>
 
-        return (
-            <div className="cart_section">
-                <div className="container-fluid">
-                    <div className="row">
-                        <div className="col-lg-10 offset-lg-1">
-                            <div className="cart_container">
-                                <div className="cart_title">List of Products</div>
-                                <div className="cart_items">
-                                    <ul className="cart_list">
-                                        {
-                                            fakeProps.map((product) => <li className="cart_item clearfix">
-                                                <div className="cart_item_image"><img src={product.image} alt="product" /></div>
-                                                <div className="cart_item_info d-flex flex-md-row flex-column justify-content-between">
-                                                    <div className="cart_item_name cart_info_col">
-                                                        <div className="cart_item_title">Name</div>
-                                                        <div className="cart_item_text">{product.name}</div>
-
-                                                    </div>
-                                                    <div className="cart_item_quantity cart_info_col">
-                                                        <div className="cart_item_title">Description</div>
-                                                        <div className="cart_item_text">{product.description}</div>
-                                                        <div style={{ cursor: "pointer" }} >remove 1</div>
-                                                        <div style={{ cursor: "pointer" }} >edit 1</div>
-                                                    </div>
-                                                    <div className="cart_item_price cart_info_col">
-                                                        <div className="cart_item_title">Price</div>
-                                                        <div className="cart_item_text">{product.price}</div>
-                                                    </div>
                                                 </div>
-                                            </li>
-                                            )}
+                                                <div className="cart_item_quantity cart_info_col">
+                                                    <div className="cart_item_title">Description</div>
+                                                    <div className="cart_item_text">{product.description}</div>
+                                                    <div onClick={handleDelete(product._id)} style={{ cursor: "pointer" }} >delete</div>
+                                                </div>
+                                                <div className="cart_item_price cart_info_col">
+                                                    <div className="cart_item_title">Price</div>
+                                                    <div className="cart_item_text">{product.price}</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        )}
 
-                                    </ul>
-                                </div>
-                                <div className="cart_buttons">
-                                    <button type="button" className="button cart_button_clear">Add new product</button>
-                                    
-                                </div>
+                                </ul>
+                            </div>
+                            <div className="cart_buttons">
+                                <a href="/adm/products/new" type="button" className="button cart_button_clear">Add new product</a>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        )
-    }
+        </div>
+    )
+}
 
 
-export default ProductsMom
+export default ProductsMomWithRealData

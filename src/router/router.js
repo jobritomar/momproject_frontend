@@ -8,6 +8,7 @@ import AboutUs from "../pages/AboutUs";
 import Products from "../pages/Products"
 import Profile from "../pages/Profile/ClientProfile";
 import MomProfile from "../pages/Profile/MomProfile";
+import AddProduct from "../pages/Profile/AddProduct";
 
 
 function AppRouter() {
@@ -16,6 +17,9 @@ function AppRouter() {
     <>
       <NavBar />
       <Switch>
+
+
+
         <GuestRoute exact path={ROUTES.login}>
           <Auth isLogin={true} />
         </GuestRoute>
@@ -44,7 +48,6 @@ function AppRouter() {
         <AppRoute path={ROUTES.momprofile}>
           <MomProfile />
         </AppRoute>
-
 
 
       </Switch>

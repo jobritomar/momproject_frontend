@@ -11,7 +11,8 @@ const ProductsWithTrueData = () => {
     })
 
   }, 
-  [products])
+    []
+  )
 
   return <Products products={products} />
 

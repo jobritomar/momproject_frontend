@@ -4,6 +4,8 @@ import { ROUTES } from "../../router/constants"
 import { Switch, Route, useLocation } from 'react-router-dom'
 import OrdersMom from "./OrdersMom"
 import ProductsMom from "./ProductsMom"
+import AddProduct from "./AddProduct";
+import OrderFile from "./OrderFile";
 
 const ProfileSmall = () => {
 
@@ -58,14 +60,27 @@ function MomProfile() {
               <ProfileSmall />
             </Route> 
 
-            <Route path="/adm/products">
+   
+            
+            <Route exact path="/adm/orders">
+              <OrdersMom />
+            </Route> 
+
+            <Route path="/adm/orders/:id">
+              <OrderFile />
+            </Route> 
+
+            <Route exact path="/adm/products">
               <ProductsMom />
             </Route> 
 
-            
-            <Route path="/adm/orders">
-              <OrdersMom />
-            </Route> 
+            <Route path={ROUTES.newProduct}>
+              <AddProduct />
+            </Route>
+
+
+              
+
           </Switch>
         </div>
       </div>

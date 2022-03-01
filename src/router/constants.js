@@ -9,6 +9,7 @@ export const ROUTES = {
   orders: "/profile/orders",
   momorders: "/adm/orders",
   momprofile: "/adm/",
-  momproducts:"/adm/products"
+  momproducts:"/adm/products",
+  addProduct: "/adm/products/new"
 
 };
