@@ -2,8 +2,8 @@ import React from "react";
 import { useAuth } from "../../context/AuthContext";
 import { ROUTES } from "../../router/constants"
 import { Switch, Route, useLocation } from 'react-router-dom'
-import Cart from "./Cart"
-import Orders from "./Orders"
+import OrdersMom from "./OrdersMom"
+import ProductsMom from "./ProductsMom"
 
 const ProfileSmall = () => {
 
@@ -12,12 +12,12 @@ const ProfileSmall = () => {
   return (
     <div>
       <h5 className="card-title"> Welcome {user?.name} </h5>
-      <p className="card-text">Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia, pesquisou uma das mais obscuras palavras em latim, consectetur, oriunda de uma passagem de Lorem Ipsum, e, procurando por entre citações da palavra na literatura clássica, descobriu a sua indubitável origem.</p>
+      <p className="card-text">Ao contrário do se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia, pesquisou uma das mais obscuras palavras em latim, consectetur, oriunda de uma passagem de Lorem Ipsum, e, procurando por entre citações da palavra na literatura clássica, descobriu a sua indubitável origem.</p>
     </div>
   )
 }
 
-function Profile() {
+function MomProfile() {
 
   
   const location = useLocation();
@@ -41,30 +41,30 @@ function Profile() {
         <div className="card-header">
           <ul className="nav nav-pills card-header-pills">
             <li className="nav-item">
-              <a className={isActive(ROUTES.profile)} href={ROUTES.profile}>My Profile</a>
+              <a className={isActive(ROUTES.profile)} href={ROUTES.momprofile}>My Profile</a>
             </li>
             <li className="nav-item">
-              <a className={isActive(ROUTES.cart)} href={ROUTES.cart}>My Cart</a>
+              <a className={isActive(ROUTES.cart)} href={ROUTES.momproducts}>My Products</a>
             </li>
             <li className="nav-item">
-              <a className={isActive(ROUTES.orders)} href={ROUTES.orders}>My Orders</a>
+              <a className={isActive(ROUTES.orders)} href={ROUTES.momorders}>My Orders</a>
             </li>
           </ul>
         </div>
 
         <div className="card-body">
           <Switch>
-            <Route exact path="\/profile">
+            <Route exact path="/adm">
               <ProfileSmall />
             </Route> 
 
-            <Route path="/profile/cart">
-              <Cart />
+            <Route path="/adm/products">
+              <ProductsMom />
             </Route> 
 
             
-            <Route path="/profile/orders">
-              <Orders />
+            <Route path="/adm/orders">
+              <OrdersMom />
             </Route> 
           </Switch>
         </div>
@@ -74,4 +74,4 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default MomProfile;

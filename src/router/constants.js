@@ -6,5 +6,9 @@ export const ROUTES = {
   products:"/products",
   profile: "/profile",
   cart: "/profile/cart",
-  orders: "/profile/orders"
+  orders: "/profile/orders",
+  momorders: "/adm/orders",
+  momprofile: "/adm/",
+  momproducts:"/adm/products"
+
 };

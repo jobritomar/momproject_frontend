@@ -6,7 +6,8 @@ import NavBar from "../components/NavBar";
 import { ROUTES } from ".";
 import AboutUs from "../pages/AboutUs";
 import Products from "../pages/Products"
-import Profile from "../pages/Profile/Profile";
+import Profile from "../pages/Profile/ClientProfile";
+import MomProfile from "../pages/Profile/MomProfile";
 
 
 function AppRouter() {
@@ -38,6 +39,10 @@ function AppRouter() {
 
         <AppRoute path="/profile">
           <Profile />
+        </AppRoute>
+
+        <AppRoute path={ROUTES.momprofile}>
+          <MomProfile />
         </AppRoute>
 
 
