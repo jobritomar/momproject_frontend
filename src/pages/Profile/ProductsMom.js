@@ -1,8 +1,3 @@
-import { newOrder } from "../../api/orders"
-import { indexCart, removeFromCart } from "../../api/cart"
-import { ROUTES } from "../../router"
-
-
 const fakeProps = [
     {
             image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Banana-Single.jpg/1200px-Banana-Single.jpg",

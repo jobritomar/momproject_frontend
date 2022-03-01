@@ -1,19 +1,19 @@
 const OrdersMom = () => {
     return (
         <div>
-            <main class="content">
-    <div class="container p-0">
+            <main className="content">
+    <div className="container p-0">
 
-        <h1 class="h3 mb-3">List of tasks</h1>
+        <h1 className="h3 mb-3">List of tasks</h1>
 
-        <div class="row">
-            <div class="col-12 col-lg-6 col-xl-3">
-                <div class="card card-border-primary">
-                    <div class="card-header">
-                        <div class="card-actions float-right">
-                            <div class="dropdown show">
-                                <a href="#" data-toggle="dropdown" data-display="static">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal align-middle">
+        <div className="row">
+            <div className="col-12 col-lg-6 col-xl-3">
+                <div className="card card-border-primary">
+                    <div className="card-header">
+                        <div className="card-actions float-right">
+                            <div className="dropdown show">
+                                <a href="/" data-toggle="dropdown" data-display="static">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-more-horizontal align-middle">
                                         <circle cx="12" cy="12" r="1"></circle>
                                         <circle cx="19" cy="12" r="1"></circle>
                                         <circle cx="5" cy="12" r="1"></circle>
@@ -21,17 +21,17 @@ const OrdersMom = () => {
                                 </a>
                             </div>
                         </div>
-                        <h5 class="card-title">Upcoming Orders</h5>
-                        <h6 class="card-subtitle text-muted">Orders to check</h6>
+                        <h5 className="card-title">Upcoming Orders</h5>
+                        <h6 className="card-subtitle text-muted">Orders to check</h6>
                     </div>
-                    <div class="card-body p-3">
+                    <div className="card-body p-3">
 
-                        <div class="card mb-3 bg-light">
-                            <div class="card-body p-3">
-                                <div class="float-right mr-n2">
-                                    <label class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" checked=""/>
-                                        <span class="custom-control-label"></span>
+                        <div className="card mb-3 bg-light">
+                            <div className="card-body p-3">
+                                <div className="float-right mr-n2">
+                                    <label className="custom-control custom-checkbox">
+                                        <input type="checkbox" className="custom-control-input" checked=""/>
+                                        <span className="custom-control-label"></span>
                                     </label>
                                 </div>
                                 <h6>Order number 1</h6>
@@ -39,21 +39,21 @@ const OrdersMom = () => {
                                     <li> Client XXXX</li>
                                     <li> Total $ </li>
                                 </ul>
-                                <a class="btn btn-outline-primary btn-sm" href="#">View</a>
-                                <a class="btn btn-outline-primary btn-sm" href="#">Delete</a>
+                                <a className="btn btn-outline-primary btn-sm" href="/">View</a>
+                                <a className="btn btn-outline-primary btn-sm" href="/">Delete</a>
                             </div>
                         </div>
 
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-6 col-xl-3">
-                <div class="card card-border-warning">
-                    <div class="card-header">
-                        <div class="card-actions float-right">
-                            <div class="dropdown show">
-                                <a href="#" data-toggle="dropdown" data-display="static">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal align-middle">
+            <div className="col-12 col-lg-6 col-xl-3">
+                <div className="card card-border-warning">
+                    <div className="card-header">
+                        <div className="card-actions float-right">
+                            <div className="dropdown show">
+                                <a href="/" data-toggle="dropdown" data-display="static">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-more-horizontal align-middle">
                                         <circle cx="12" cy="12" r="1"></circle>
                                         <circle cx="19" cy="12" r="1"></circle>
                                         <circle cx="5" cy="12" r="1"></circle>
@@ -62,17 +62,17 @@ const OrdersMom = () => {
 
                             </div>
                         </div>
-                        <h5 class="card-title">In Progress</h5>
-                        <h6 class="card-subtitle text-muted">Orders that are in the process of making</h6>
+                        <h5 className="card-title">In Progress</h5>
+                        <h6 className="card-subtitle text-muted">Orders that are in the process of making</h6>
                     </div>
-                    <div class="card-body">
+                    <div className="card-body">
 
-                    <div class="card mb-3 bg-light">
-                            <div class="card-body p-3">
-                                <div class="float-right mr-n2">
-                                    <label class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" checked=""/>
-                                        <span class="custom-control-label"></span>
+                    <div className="card mb-3 bg-light">
+                            <div className="card-body p-3">
+                                <div className="float-right mr-n2">
+                                    <label className="custom-control custom-checkbox">
+                                        <input type="checkbox" className="custom-control-input" checked=""/>
+                                        <span className="custom-control-label"></span>
                                     </label>
                                 </div>
                                 <h6>Order number 1</h6>
@@ -80,8 +80,8 @@ const OrdersMom = () => {
                                     <li> Client XXXX</li>
                                     <li> Total $ </li>
                                 </ul>
-                                <a class="btn btn-outline-primary btn-sm" href="#">View</a>
-                                <a class="btn btn-outline-primary btn-sm" href="#">Delete</a>
+                                <a className="btn btn-outline-primary btn-sm" href="/">View</a>
+                                <a className="btn btn-outline-primary btn-sm" href="/">Delete</a>
                             </div>
                         </div>
 
@@ -90,13 +90,13 @@ const OrdersMom = () => {
                 </div>
             </div>
 
-            <div class="col-12 col-lg-6 col-xl-3">
-                <div class="card card-border-warning">
-                    <div class="card-header">
-                        <div class="card-actions float-right">
-                            <div class="dropdown show">
-                                <a href="#" data-toggle="dropdown" data-display="static">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal align-middle">
+            <div className="col-12 col-lg-6 col-xl-3">
+                <div className="card card-border-warning">
+                    <div className="card-header">
+                        <div className="card-actions float-right">
+                            <div className="dropdown show">
+                                <a href="/" data-toggle="dropdown" data-display="static">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-more-horizontal align-middle">
                                         <circle cx="12" cy="12" r="1"></circle>
                                         <circle cx="19" cy="12" r="1"></circle>
                                         <circle cx="5" cy="12" r="1"></circle>
@@ -105,17 +105,17 @@ const OrdersMom = () => {
 
                             </div>
                         </div>
-                        <h5 class="card-title">On Hold</h5>
-                        <h6 class="card-subtitle text-muted">Orders that are in the process of making</h6>
+                        <h5 className="card-title">On Hold</h5>
+                        <h6 className="card-subtitle text-muted">Orders that are in the process of making</h6>
                     </div>
-                    <div class="card-body">
+                    <div className="card-body">
 
-                    <div class="card mb-3 bg-light">
-                            <div class="card-body p-3">
-                                <div class="float-right mr-n2">
-                                    <label class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" checked=""/>
-                                        <span class="custom-control-label"></span>
+                    <div className="card mb-3 bg-light">
+                            <div className="card-body p-3">
+                                <div className="float-right mr-n2">
+                                    <label className="custom-control custom-checkbox">
+                                        <input type="checkbox" className="custom-control-input" checked=""/>
+                                        <span className="custom-control-label"></span>
                                     </label>
                                 </div>
                                 <h6>Order number 1</h6>
@@ -123,8 +123,8 @@ const OrdersMom = () => {
                                     <li> Client XXXX</li>
                                     <li> Total $ </li>
                                 </ul>
-                                <a class="btn btn-outline-primary btn-sm" href="#">View</a>
-                                <a class="btn btn-outline-primary btn-sm" href="#">Delete</a>
+                                <a className="btn btn-outline-primary btn-sm" href="/">View</a>
+                                <a className="btn btn-outline-primary btn-sm" href="/">Delete</a>
                             </div>
                         </div>
 
@@ -133,13 +133,13 @@ const OrdersMom = () => {
                 </div>
             </div>
 
-            <div class="col-12 col-lg-6 col-xl-3">
-                <div class="card card-border-warning">
-                    <div class="card-header">
-                        <div class="card-actions float-right">
-                            <div class="dropdown show">
-                                <a href="#" data-toggle="dropdown" data-display="static">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal align-middle">
+            <div className="col-12 col-lg-6 col-xl-3">
+                <div className="card card-border-warning">
+                    <div className="card-header">
+                        <div className="card-actions float-right">
+                            <div className="dropdown show">
+                                <a href="/" data-toggle="dropdown" data-display="static">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-more-horizontal align-middle">
                                         <circle cx="12" cy="12" r="1"></circle>
                                         <circle cx="19" cy="12" r="1"></circle>
                                         <circle cx="5" cy="12" r="1"></circle>
@@ -148,17 +148,17 @@ const OrdersMom = () => {
 
                             </div>
                         </div>
-                        <h5 class="card-title">Completed</h5>
-                        <h6 class="card-subtitle text-muted">Orders that are in the process of making</h6>
+                        <h5 className="card-title">Completed</h5>
+                        <h6 className="card-subtitle text-muted">Orders that are in the process of making</h6>
                     </div>
-                    <div class="card-body">
+                    <div className="card-body">
 
-                    <div class="card mb-3 bg-light">
-                            <div class="card-body p-3">
-                                <div class="float-right mr-n2">
-                                    <label class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" checked=""/>
-                                        <span class="custom-control-label"></span>
+                    <div className="card mb-3 bg-light">
+                            <div className="card-body p-3">
+                                <div className="float-right mr-n2">
+                                    <label className="custom-control custom-checkbox">
+                                        <input type="checkbox" className="custom-control-input" checked=""/>
+                                        <span className="custom-control-label"></span>
                                     </label>
                                 </div>
                                 <h6>Order number 1</h6>
@@ -166,8 +166,8 @@ const OrdersMom = () => {
                                     <li> Client XXXX</li>
                                     <li> Total $ </li>
                                 </ul>
-                                <a class="btn btn-outline-primary btn-sm" href="#">View</a>
-                                <a class="btn btn-outline-primary btn-sm" href="#">Delete</a>
+                                <a className="btn btn-outline-primary btn-sm" href="/">View</a>
+                                <a className="btn btn-outline-primary btn-sm" href="/">Delete</a>
 
                             </div>
                         </div>
