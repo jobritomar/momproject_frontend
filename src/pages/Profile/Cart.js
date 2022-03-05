@@ -1,5 +1,5 @@
 import { newOrder } from "../../api/orders"
-import { indexCart, removeFromCart } from "../../api/cart"
+import { clearCart, indexCart, removeFromCart } from "../../api/cart"
 import { ROUTES } from "../../router"
 
 
@@ -27,6 +27,8 @@ const Cart = () => {
 
     const onPurchase = () => {
         const res = newOrder(cartWithQuantity)
+        clearCart()
+        window.location.assign(ROUTES.orders)
         console.log({res})
     }
 

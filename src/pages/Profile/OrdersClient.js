@@ -33,7 +33,7 @@ const Orders = (props) => {
           <div className="card-header p-4">
             <div className="d-flex justify-content-between align-items-center">
               <div>
-                <p className="text-muted mb-2"> Order ID <span>{order._id}</span></p>
+                <p className="text-muted mb-2"> Order ID <span>{order.number}</span></p>
               </div>
             </div>
           </div>

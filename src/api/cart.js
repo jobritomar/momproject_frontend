@@ -26,3 +26,7 @@ export const indexCart = () => {
 
     return JSON.parse(cartString)
 }
+
+export const clearCart = () => {
+    localStorage.setItem("cart", JSON.stringify([]))
+}
