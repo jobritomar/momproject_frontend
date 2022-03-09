@@ -121,7 +121,9 @@ body{
 }
 
 .card-img-top {
-  height: 100%
+  width: 200px;
+  height: 200px;
+  align-self: center;
 }
 .card {
   margin-bottom: 1.5rem;
@@ -157,4 +159,90 @@ body{
   border-bottom: 1px solid #e5e9f2;
 }
 
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #e9ecef;
 
+}
+
+
+.products.box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.product.card {
+  flex-basis: 400px;
+}
+
+.card-text.price {
+  font-size: 20px;
+}
+
+.card-title.name {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.product .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom {
+  margin-bottom: 0;
+  margin-top: auto;
+}
+
+.cart_item_title {
+  font-size: 20px;
+}
+
+
+
+
+.orderStatus {
+  font-weight: bold;
+
+}
+
+.status {
+  font-size: 25px;
+}
+
+.orderId {
+  font-size: 25px;
+}
+
+.navbar-nav {
+  width: 100%;
+}
+
+.right {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.delete{
+  background-color: white;
+}
+
+.cart_item_name {
+  margin-left: 60px;
+  min-width: 100px;
+}
+
+.cart_item_text{
+  margin-bottom: 20px;
+}
+
+.clearfix{
+border: solid 1px #e8e8e8
+
+}

@@ -15,8 +15,10 @@ const AddProduct = (props) => {
     const [state, setState] = React.useState(initialState)
 
     const changeState = (key) => (event) => {
+
+        const file = event.target.files?.[0]
     
-        const newState = {...state, [key]: event.target.value}
+        const newState = {...state, [key]: file ? file : event.target.value}
         console.log({newState})
         setState(newState)
 
@@ -27,7 +29,10 @@ const AddProduct = (props) => {
         console.log("submitting", {state})
 
         const item = await createItem(state)
-        toast.success("submitted " + item.name)
+        toast.success("submitted " + item.name, {onClose: () => {
+            window.location.assign("/adm/products")
+        }})
+        
         
     }
 
@@ -61,7 +66,7 @@ const AddProduct = (props) => {
 
                         <div class="form-group">
                             <div class="col-md-8">
-                                <input onChange={changeState('image')} value={state.image} type="file" placeholder="Phone" class="form-control" />
+                                <input onChange={changeState('image')} type="file" placeholder="Phone" class="form-control" />
                             </div>
                         </div>
 

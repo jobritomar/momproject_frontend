@@ -34,8 +34,6 @@ function Profile() {
 
   return (
     <div>
-      <h1 class="display-1">Mom's Project</h1>
-
       <div className="card text-center">
 
         <div className="card-header">

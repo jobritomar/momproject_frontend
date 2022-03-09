@@ -1,5 +1,15 @@
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
+
+
 const AboutUs = (props) => {
-    return (
+    return (<>
+    <div class="bg-dark text-secondary px-4 py-5 text-center">
+    <div class="py-5">
+      <h1 class="display-3 fw-bold text-white">MomProject</h1>
+
+    </div>
+  </div>
         <div className="jumbotron">
             <h1 className="display-4"> About this project </h1>
 
@@ -13,25 +23,31 @@ const AboutUs = (props) => {
                 </p>
             </div>
 
-            <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
-  <div className="carousel-inner">
-    <div className="carousel-item active">
-      <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=1200:*" className="d-block w-100" alt="..."/>
-    </div>
-    <div className="carousel-item">
-      <img src="https://i0.statig.com.br/bancodeimagens/br/4j/48/br4j4845bvi3ygylo5wnhk84v.jpg" className="d-block w-100" alt="..."/>
-    </div>
-    <div className="carousel-item">
-      <img src="https://comparaplano.com.br/wp-content/uploads/2019/09/dog-tv.png" className="d-block w-100" alt="..."/>
-    </div>
-  </div>
-</div>
+
+            <Carousel autoPlay>
+                <div>
+                    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=1200:*" />
+                    <p className="legend">Legend 1</p>
+                </div>
+                <div>
+                    <img src="https://i0.statig.com.br/bancodeimagens/br/4j/48/br4j4845bvi3ygylo5wnhk84v.jpg" />
+                    <p className="legend">Legend 2</p>
+                </div>
+                <div>
+                    <img src="https://comparaplano.com.br/wp-content/uploads/2019/09/dog-tv.png" />
+                    <p className="legend">Legend 3</p>
+                </div>
+            </Carousel>
 
 
 
 
 
-        </div>)
+
+        </div></>)
 }
+
+
+
 
 export default AboutUs

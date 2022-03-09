@@ -33,7 +33,7 @@ const Orders = (props) => {
           <div className="card-header p-4">
             <div className="d-flex justify-content-between align-items-center">
               <div>
-                <p className="text-muted mb-2"> Order ID <span>{order.number}</span></p>
+                <p className="orderId"> Order ID <span>{order.number}</span></p>
               </div>
             </div>
           </div>
@@ -42,9 +42,9 @@ const Orders = (props) => {
             <div className="d-flex flex-row mb-4 pb-2">
             
               <div className="flex-fill">
-                <h5 className="bold">{p._id.name}</h5>
-                <p className="text-muted"> Qt: {p.quantity} item</p>
-                <h4 className="mb-3"> {p.quantity*p._id.price} <span> euros </span></h4>
+                <h5 className="mb-3">Name: {p._id.name}</h5>
+                <h5 className="mb-3"> Qt: {p.quantity} item</h5>
+                <h5 className="mb-3">Total: {p.quantity*p._id.price} <span> euros </span></h5>
               </div>
               <div>
                 <img className="align-self-center img-fluid" src={p._id.image} alt="product" width="250"/>
@@ -53,7 +53,7 @@ const Orders = (props) => {
             </div>
             )}
             <ul id="progressbar-1" className="mx-0 mt-0 mb-5 px-0 pt-0 pb-4">
-              <li className="status" id="status"><span>Status: {order.status}</span></li>
+              <li className="status" id="status"><span>Status: <span className="orderStatus">{order.status}</span></span></li>
             </ul>
           </div>
         </div>

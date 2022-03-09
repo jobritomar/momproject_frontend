@@ -36,20 +36,18 @@ function MomProfile() {
 
   return (
     <div>
-      <h1 class="display-1">Mom's Project</h1>
-
       <div className="card text-center">
 
         <div className="card-header">
           <ul className="nav nav-pills card-header-pills">
             <li className="nav-item">
-              <a className={isActive(ROUTES.profile)} href={ROUTES.momprofile}>My Profile</a>
+              <a className={isActive(ROUTES.momprofile)} href={ROUTES.momprofile}>My Profile</a>
             </li>
             <li className="nav-item">
-              <a className={isActive(ROUTES.cart)} href={ROUTES.momproducts}>My Products</a>
+              <a className={isActive(ROUTES.momproducts)} href={ROUTES.momproducts}>Products</a>
             </li>
             <li className="nav-item">
-              <a className={isActive(ROUTES.orders)} href={ROUTES.momorders}>My Orders</a>
+              <a className={isActive(ROUTES.momorders)} href={ROUTES.momorders}>Orders</a>
             </li>
           </ul>
         </div>

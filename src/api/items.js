@@ -5,7 +5,14 @@ export async function listItems() {
 }
 
 export async function createItem(item) {
-  return api.post("/api/items/new", item).then(res => res.data)
+
+  const formData  = new FormData();
+
+  for(const name in item) {
+    formData.append(name, item[name]);
+  }
+
+  return api.post("/api/items/new", formData).then(res => res.data)
 }
 
 export async function deleteItem(id) {
