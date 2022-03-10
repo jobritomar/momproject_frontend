@@ -33,7 +33,7 @@ const Cart = () => {
     }
 
     if (cart.length === 0) {
-        return (<p>Your cart is empty!</p>)
+        return (<p className="hello-text">Your cart is empty!</p>)
     } else {
         return (
             <div className="cart_section">
@@ -56,15 +56,17 @@ const Cart = () => {
                                                     <div className="cart_item_quantity cart_info_col">
                                                         <div className="cart_item_title">Quantity</div>
                                                         <div className="cart_item_text">{product.quantity}</div>
-                                                        <div style={{ cursor: "pointer" }} onClick={removeItem(product)}>remove 1</div>
+                                                        <button className="btn btn-secondary"onClick={removeItem(product)}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+  <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
+</svg></button>
                                                     </div>
                                                     <div className="cart_item_price cart_info_col">
                                                         <div className="cart_item_title">Price</div>
-                                                        <div className="cart_item_text">{product.price}</div>
+                                                        <div className="cart_item_text">{product.price}€ </div>
                                                     </div>
                                                     <div className="cart_item_total cart_info_col">
-                                                        <div className="cart_item_title">subtotal</div>
-                                                        <div className="cart_item_text">{product.price * product.quantity}</div>
+                                                        <div className="cart_item_title">S</div>
+                                                        <div className="cart_item_text">{product.price * product.quantity} €</div>
                                                     </div>
                                                 </div>
                                             </li>
@@ -75,11 +77,11 @@ const Cart = () => {
                                 <div className="order_total">
                                     <div className="order_total_content text-md-right">
                                         <div className="order_total_title">Order Total:</div>
-                                        <div className="order_total_amount">{cartWithQuantity.reduce((acc, product) => acc + (product.quantity * product.price), 0)}</div>
+                                        <div className="order_total_amount">{cartWithQuantity.reduce((acc, product) => acc + (product.quantity * product.price), 0)} € </div>
                                     </div>
                                 </div>
                                 <div className="cart_buttons">
-                                    <button type="button" onClick={() => {window.location.assign(ROUTES.products)}} className="button cart_button_clear">Continue Shopping</button>
+                                    <button type="button" onClick={() => {window.location.assign(ROUTES.products)}} className="button cart_button_clear ">Continue Shopping</button>
                                     <button type="button" onClick={onPurchase} className="button cart_button_checkout">Checkout order</button>
                                 </div>
                             </div>

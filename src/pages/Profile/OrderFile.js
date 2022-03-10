@@ -47,7 +47,7 @@ const OrderFile = ({ order }) => {
                     <div className="flex-fill">
                       <h5 className="bold">{p._id.name}</h5>
                       <p className="text-muted"> Qt: {p.quantity} item</p>
-                      <h4 className="mb-3"> {p.quantity * p._id.price} <span> euros </span></h4>
+                      <h4 className="mb-3"> {p.quantity * p._id.price} <span> € </span></h4>
                     </div>
                     <div>
                       <img className="align-self-center img-fluid" src={p.image} alt="product" width="250" />

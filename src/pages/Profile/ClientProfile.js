@@ -10,24 +10,68 @@ const ProfileSmall = () => {
 
   const { user } = useAuth();
   return (
-    <div>
-      <h5 className="card-title"> Welcome {user?.name} </h5>
-      <p className="card-text">Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia, pesquisou uma das mais obscuras palavras em latim, consectetur, oriunda de uma passagem de Lorem Ipsum, e, procurando por entre citações da palavra na literatura clássica, descobriu a sua indubitável origem.</p>
+    <div className="greeting">
+      <h2 className="hello-user"> Welcome {user?.name} </h2>
+
+      <button type="button" onClick={() => {window.location.assign(ROUTES.products)}} className="btn btn-outline-dark btn-lg">See our products</button>
+          
+
+      <section class="vh-100" >
+        <div className="container py-5 h-100">
+          <div className="row d-flex justify-content-center align-items-center h-100">
+            <div className="col-md-12 col-xl-4">
+
+              <div className="card-client">
+                <div className="card-body text-center">
+                  <div className="mt-3 mb-4">
+                    <img
+                      src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava2-bg.webp"
+                      className="rounded-circle img-fluid"
+                      alt="1"
+                    />
+                  </div>
+
+                  <div className="client-info">
+                  <h4> Name </h4>
+                  <p className="mb-2">{user?.name}</p>
+                  <h4> Email</h4>
+                  <p className="mb-2">{user?.email} </p>
+                  <h4> Phone</h4>
+                  <p className="mb-2">{user?.phone} </p>
+                  <h4> Adress</h4>
+                  <p className="mb-2">{user?.adress} </p>
+                  <button type="button" className="btn btn-outline-secondary btn-primary btn-lg">
+                    Edit Profile
+                  </button>
+
+                  </div>
+
+                  
+                </div>
+              </div>
+
+            </div>
+          </div>
+            
+        </div>
+      </section>
+
+
     </div>
   )
 }
 
 function Profile() {
 
-  
+
   const location = useLocation();
 
   const isActive = (route) => {
-    
+
     let classes = "nav-link"
     if (location.pathname === route) {
       classes = classes + " active"
-    } 
+    }
 
     return classes
   }
@@ -54,16 +98,16 @@ function Profile() {
           <Switch>
             <Route exact path="/profile">
               <ProfileSmall />
-            </Route> 
+            </Route>
 
             <Route path="/profile/cart">
               <Cart />
-            </Route> 
+            </Route>
 
-            
+
             <Route path="/profile/orders">
               <Orders />
-            </Route> 
+            </Route>
           </Switch>
         </div>
       </div>

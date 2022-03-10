@@ -42,9 +42,9 @@ const Orders = (props) => {
             <div className="d-flex flex-row mb-4 pb-2">
             
               <div className="flex-fill">
-                <h5 className="mb-3">Name: {p._id.name}</h5>
-                <h5 className="mb-3"> Qt: {p.quantity} item</h5>
-                <h5 className="mb-3">Total: {p.quantity*p._id.price} <span> euros </span></h5>
+                <h5 className="mb-3"><span>Name: </span> {p._id.name}</h5>
+                <h5 className="mb-3"> <span>Quantity: </span> {p.quantity} item</h5>
+                <h5 className="mb-3"><span> Total: </span>{p.quantity*p._id.price} euros € </h5>
               </div>
               <div>
                 <img className="align-self-center img-fluid" src={p._id.image} alt="product" width="250"/>

@@ -1,3 +1,5 @@
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -107,13 +109,13 @@ ul {
 }
 
 .cart_item_title {
-  font-size: 14px;
-  font-weight: 400;
-  color: rgba(0, 0, 0, 0.5)
+  font: 700 1.25rem/1.875rem "Montserrat", sans-serif;
+  color: black
+
 }
 
 .cart_item_text {
-  font-size: 18px;
+  font-size: 20px;
   margin-top: 35px
 }
 
@@ -152,7 +154,6 @@ ul {
 .order_total_title {
   display: inline-block;
   font-size: 14px;
-  color: rgba(0, 0, 0, 0.5);
   line-height: 60px
 }
 
@@ -161,7 +162,8 @@ ul {
   font-size: 18px;
   font-weight: 500;
   margin-left: 26px;
-  line-height: 60px
+  line-height: 60px;
+  font: 400 1.625rem/2.125rem "Montserrat", sans-serif, black
 }
 
 .cart_buttons {
@@ -217,6 +219,53 @@ ul {
 }
 
 .cart_container h1 {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 
 } 
+
+.hello-user{
+  margin-bottom: 45px;
+  margin-top: 30px;
+  font: 700 3rem/1rem "Montserrat", sans-serif, black;
+  margin-top: 40px
+
+}
+
+.card h4{
+  font: 400 1.5rem/3.5rem "Montserrat", sans-serif
+}
+
+
+.card a{
+  font-weight: normal;
+  font: 400 1.2rem/1.625rem "Montserrat", sans-serif
+}
+
+.cart_item_text{
+  font: 400 1rem/1.625rem "Montserrat", sans-serif
+}
+
+.greeting button{
+  font: 400 1rem/0 "Montserrat", sans-serif
+}
+
+.cart_title{
+  font: 700 2.25rem/2.875rem "Montserrat", sans-serif;
+  margin-bottom: 35px;
+}
+
+.order_total_title{
+  font: 700 1.625rem/2.125rem "Montserrat", sans-serif, black
+}
+
+.greeting button{
+  height: 30px;
+}
+
+.hello-products{
+  font:400 2em/2rem "Montserrat", sans-serif, black
+}
+
+.text-muted{
+  font: 400 1rem/1.625rem "Montserrat", sans-serif
+}
