@@ -5,9 +5,28 @@ import OrdersMom from "./OrdersMom"
 import ProductsMom from "./ProductsMom"
 import AddProduct from "./AddProduct";
 import OrderFile from "./OrderFile";
+import { listOrders } from "../../api/orders";
+import { groupBy } from "lodash"
 
-const ProfileSmall = () => {
+const ProfileMomWithRealData = () => {
 
+  const [orders, setOrders] = React.useState([])
+  React.useEffect(() => {
+      listOrders().then(orders => {
+          setOrders(orders)
+      })
+
+  },
+      [])
+
+  return <ProfileSmall orders={orders} />
+
+}
+
+
+const ProfileSmall = (props) => {
+
+  const groupedOrders = groupBy(props.orders, (order) => order.status)
 
   return (
     <div className="mom-painel">
@@ -22,7 +41,7 @@ const ProfileSmall = () => {
               <div className="media d-flex">
                 <div className="media-body text-left">
                   <h3 className="Sucess">
-                    32
+                    {groupedOrders["pending"]?.length || 0}
                   </h3>
                   <span className="label-name"> Pending orders</span>
                 </div>
@@ -45,7 +64,7 @@ const ProfileSmall = () => {
               <div className="media d-flex">
                 <div className="media-body text-left">
                   <h3 className="Sucess">
-                    32
+                  {groupedOrders["in_progress"]?.length || 0}
                   </h3>
                   <span className="label-name"> Orders In Progress</span>
                 </div>
@@ -68,7 +87,7 @@ const ProfileSmall = () => {
               <div className="media d-flex">
                 <div className="media-body text-left">
                   <h3 className="sucess">
-                    2
+                  {groupedOrders["completed"]?.length || 0}
                   </h3>
                   <span className="label-name"> Orders completed</span>
                 </div>
@@ -94,9 +113,9 @@ function MomProfile() {
 
   const isActive = (route) => {
 
-    let classes = "nav-link"
+    let classes = "nav-link btn"
     if (location.pathname === route) {
-      classes = classes + " active"
+      classes = classes + " btn-dark active"
     }
 
     return classes
@@ -123,7 +142,7 @@ function MomProfile() {
         <div className="card-body">
           <Switch>
             <Route exact path="/adm">
-              <ProfileSmall />
+              <ProfileMomWithRealData />
             </Route>
 
 

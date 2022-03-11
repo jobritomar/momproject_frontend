@@ -81,8 +81,8 @@ const Cart = () => {
                                     </div>
                                 </div>
                                 <div className="cart_buttons">
-                                    <button type="button" onClick={() => {window.location.assign(ROUTES.products)}} className="button cart_button_clear ">Continue Shopping</button>
-                                    <button type="button" onClick={onPurchase} className="button cart_button_checkout">Checkout order</button>
+                                    <button type="button" onClick={() => {window.location.assign(ROUTES.products)}} className="btn btn-light btn-lg">Continue Shopping</button>
+                                    <button type="button" onClick={onPurchase} className="btn btn-dark btn-lg">Checkout order</button>
                                 </div>
                             </div>
                         </div>

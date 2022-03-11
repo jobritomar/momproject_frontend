@@ -70,7 +70,7 @@ const ProductsMom = (props) => {
                             </div>
 
 
-                            <button type="button" onClick={() => {window.location.assign(ROUTES.addProduct)}} className="btn btn-outline-warning btn-lg">See our products</button>
+                            <button type="button" onClick={() => {window.location.assign(ROUTES.addProduct)}} className="btn btn-warning btn-lg">Add products</button>
                         </div>
                     </div>
                 </div>

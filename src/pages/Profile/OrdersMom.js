@@ -22,7 +22,7 @@ const Order = ({ order }) => {
 
             </div>
             <div className="order">
-            <h6><span>Order #</span> {order._id}</h6>
+            <h6><span>Order #</span> {order.number}</h6>
             <p><span> Client: </span>{order.user.name} </p>
             <a className="btn btn btn-warning" href={"/adm/orders/" + order._id}>View</a>
             <button onClick={handleDelete(order._id)} className="btn btn-outline-secondary">Delete</button>

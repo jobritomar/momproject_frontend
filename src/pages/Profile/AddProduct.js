@@ -43,7 +43,7 @@ const AddProduct = (props) => {
             <div class="well well-sm">
                 <form class="form-horizontal" onSubmit={onSubmit}>
                     <fieldset>
-                        <legend class="text-center header">Add new product</legend>
+                        <div class="cart_title">Add new product</div>
 
                         <div class="form-group">
              

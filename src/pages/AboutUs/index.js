@@ -2,6 +2,35 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import { ROUTES } from "../../router"
 
+import _1 from "../../images/1.jpeg"
+import _3 from "../../images/3.jpeg"
+import _4 from "../../images/4.jpeg"
+import _5 from "../../images/5.jpeg"
+import _6 from "../../images/6.jpeg"
+import _7 from "../../images/7.jpeg"
+import _9 from "../../images/9.jpeg"
+import _10 from "../../images/10.jpeg"
+import _11 from "../../images/11.jpeg"
+import _13 from "../../images/13.jpeg"
+import _15 from "../../images/15.jpeg"
+import _16 from "../../images/16.jpeg"
+import _17 from "../../images/17.jpeg"
+
+const images = [
+_1,
+_3,
+_4,
+_5,
+_6,
+_7,
+_9,
+_10,
+_11,
+_13,
+_15,
+_16,
+_17,
+]
 
 const AboutUs = (props) => {
     return (<>
@@ -51,15 +80,13 @@ const AboutUs = (props) => {
                 <div class="swiper-container image-slider-1">
                     <div class="swiper-wrapper">
                         <Carousel autoPlay={true}>
-                            <div class="swiper-slide">
-                                <img class="img-fluid" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=1200:*" alt="1"/>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="https://i0.statig.com.br/bancodeimagens/br/4j/48/br4j4845bvi3ygylo5wnhk84v.jpg" alt="2" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="https://comparaplano.com.br/wp-content/uploads/2019/09/dog-tv.png" alt="3"/>
-                            </div>
+                            {
+                                images.map(img => (
+                                    <div class="swiper-slide">
+                                        <img class="img-fluid" src={img} alt="p"/>
+                                    </div>
+                                ))
+                            }
                         </Carousel>
 
                     </div>

@@ -68,9 +68,9 @@ function Profile() {
 
   const isActive = (route) => {
 
-    let classes = "nav-link"
+    let classes = "nav-link btn"
     if (location.pathname === route) {
-      classes = classes + " active"
+      classes = classes + " btn-dark active"
     }
 
     return classes
