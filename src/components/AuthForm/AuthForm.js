@@ -97,6 +97,8 @@ function AuthForm({ onSubmit, submitMessage, isSignUp }) {
                         <label class="form-label" for="typeEmailX">Address</label>
                       </div>
 
+                      <button class="btn btn-outline-light btn-lg px-5" type="submit">{submitMessage}</button>
+
                     </>}
 
 
