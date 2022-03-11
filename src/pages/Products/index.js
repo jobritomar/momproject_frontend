@@ -28,7 +28,7 @@ const Products = (props) => {
     <div>
       <h2 className="hello-user"> Our products </h2>
 
-      <p className="hello-products">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <p className="hello-products"> You can check and enjoy our tasty products made by the students!</p>
       <hr className="my-4" />
 
 

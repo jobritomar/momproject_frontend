@@ -40,9 +40,6 @@ const ProfileSmall = () => {
                   <p className="mb-2">{user?.phone} </p>
                   <h4> Adress</h4>
                   <p className="mb-2">{user?.adress} </p>
-                  <button type="button" className="btn btn-outline-secondary btn-primary btn-lg">
-                    Edit Profile
-                  </button>
 
                   </div>
 

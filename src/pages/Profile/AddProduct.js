@@ -72,7 +72,7 @@ const AddProduct = (props) => {
 
                         <div class="form-group">
                             <div class="col-md-12 text-center">
-                                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                                <button type="submit" class="btn btn-warning btn-lg">Submit</button>
                             </div>
                         </div>
                     </fieldset>

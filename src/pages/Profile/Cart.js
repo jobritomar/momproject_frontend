@@ -65,8 +65,8 @@ const Cart = () => {
                                                         <div className="cart_item_text">{product.price}€ </div>
                                                     </div>
                                                     <div className="cart_item_total cart_info_col">
-                                                        <div className="cart_item_title">S</div>
-                                                        <div className="cart_item_text">{product.price * product.quantity} €</div>
+                                                        <div className="cart_item_title">Subtotal</div>
+                                                        <div className="cart_item_text">{(product.price * product.quantity).toFixed(2)} €</div>
                                                     </div>
                                                 </div>
                                             </li>
@@ -77,7 +77,7 @@ const Cart = () => {
                                 <div className="order_total">
                                     <div className="order_total_content text-md-right">
                                         <div className="order_total_title">Order Total:</div>
-                                        <div className="order_total_amount">{cartWithQuantity.reduce((acc, product) => acc + (product.quantity * product.price), 0)} € </div>
+                                        <div className="order_total_amount">{(cartWithQuantity.reduce((acc, product) => acc + (product.quantity * product.price), 0)).toFixed(2)} € </div>
                                     </div>
                                 </div>
                                 <div className="cart_buttons">
