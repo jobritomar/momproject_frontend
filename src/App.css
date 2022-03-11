@@ -440,4 +440,15 @@ padding-top: 30px;
   font: 400 1.5rem/3.5rem "Montserrat", sans-serif
 }
 
+.title-text{
+  font: 700 25px/1rem "Montserrat", sans-serif, black;
+  margin-left: auto;
+}
 
+.title-text span {
+  font-weight: 400;
+}
+
+.order-card span {
+  font-weight: 700;
+}
